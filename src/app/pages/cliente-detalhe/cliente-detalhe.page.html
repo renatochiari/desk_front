@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+
+<ion-content>
+  <form [formGroup]="form" *ngIf="cliente">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <ion-item>
+            <ion-label position="floating">Documento</ion-label>
+            <ion-input type="text" formControlName="documento" [(ngModel)]="cliente.documento"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="text" formControlName="nome" [(ngModel)]="cliente.nome"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Rua</ion-label>
+            <ion-input type="text" formControlName="rua" [(ngModel)]="cliente.rua"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-item>
+            <ion-label position="floating">Número</ion-label>
+            <ion-input type="text" formControlName="numero" [(ngModel)]="cliente.numero"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item size="auto">
+            <ion-label position="floating">Complemento</ion-label>
+            <ion-input type="text" formControlName="complemento" [(ngModel)]="cliente.complemento"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Bairro</ion-label>
+            <ion-input type="text" formControlName="bairro" [(ngModel)]="cliente.bairro"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">CEP</ion-label>
+            <ion-input type="text" formControlName="cep" [(ngModel)]="cliente.cep"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Cidade</ion-label>
+            <ion-input type="text" formControlName="cidade" [(ngModel)]="cliente.cidade"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Estado</ion-label>
+            <ion-input type="text" formControlName="estado" [(ngModel)]="cliente.estado"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="text" formControlName="email" [(ngModel)]="cliente.email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-toolbar>
+            <ion-button (click)="cancelar()">
+              <ion-icon name="close"></ion-icon>Cancelar
+            </ion-button>
+            <ion-button (click)="salvar()">
+              <ion-icon margin-right="5" name="save"></ion-icon>Salvar
+            </ion-button>
+          </ion-toolbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

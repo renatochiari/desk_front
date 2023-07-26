@@ -1,0 +1,27 @@
+<div *ngIf="clientes">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-searchbar placeholder="Filtrar..." (ionInput)="ionInput($event)"></ion-searchbar>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button (click)="novo()">
+            <ion-icon name="add"></ion-icon>Novo
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+
+  <ion-list>
+    <ion-item class="clickable" *ngFor="let cli of clientes" (click)="goToCliente(cli.id)">
+      <ion-label>
+        <strong>{{ cli.nome }}</strong><br>
+        <small>{{ cli.rua }}, {{ cli.numero }} - {{ cli.bairro }} - {{ cli.cidade }}/{{ cli.estado }} </small><br>
+        <small>{{ cli.email }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
