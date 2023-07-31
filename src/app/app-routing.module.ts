@@ -13,9 +13,10 @@ const routes: Routes = [
       { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
       { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
       { path: 'cliente', loadChildren: () => import('./pages/cliente/cliente.module').then(m => m.ClientePageModule) },
-      { path: 'cliente/:id', loadChildren: () => import('./pages/cliente-detalhe/cliente-detalhe.module').then(m => m.ClienteDetalhePageModule) }
+      { path: 'cliente/:id', loadChildren: () => import('./pages/cliente-detalhe/cliente-detalhe.module').then(m => m.ClienteDetalhePageModule) },
+      { path: 'usuario', loadChildren: () => import('./pages/usuario/usuario.module').then( m => m.UsuarioPageModule) }
     ]
-  }
+  }  
 ];
 
 @NgModule({

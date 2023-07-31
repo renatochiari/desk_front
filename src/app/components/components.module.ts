@@ -4,12 +4,14 @@ import { IonicModule } from "@ionic/angular";
 import { ClienteListComponent } from "./cliente-list/cliente-list.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { UserCardComponent } from "./user-card/user-card.component";
+import { UsuarioListComponent } from "./usuario-list/usuario-list.component";
 
 @NgModule({
     declarations: [
         NavbarComponent,
         UserCardComponent,
-        ClienteListComponent
+        ClienteListComponent,
+        UsuarioListComponent
     ],
     imports: [
         CommonModule,
@@ -18,7 +20,8 @@ import { UserCardComponent } from "./user-card/user-card.component";
     exports: [
         NavbarComponent,
         UserCardComponent,
-        ClienteListComponent
+        ClienteListComponent,
+        UsuarioListComponent
     ]
 })
 export class ComponentsModule { }

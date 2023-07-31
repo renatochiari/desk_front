@@ -9,12 +9,34 @@ import { SecurityUtil } from "../util/security.util";
 })
 export class UsuarioDataService {
 
+    static alterouUsuario = new EventEmitter<boolean>();
+
     public baseUrl = "http://localhost:5300";
 
     constructor(private http: HttpClient) { }
 
     public login(data: any) {
         return this.http.post(`${this.baseUrl}/v1/usuarios/login`, data);
+    }
+
+    public getUsuarios() {
+        return this.http.get(`${this.baseUrl}/v1/usuarios`, UsuarioDataService.getHeaders());
+    }
+
+    public getUsuarioById(id: string) {
+        return this.http.get(`${this.baseUrl}/v1/usuarios/${id}`, UsuarioDataService.getHeaders());
+    }
+
+    public getUsuarioByNome(nome: string) {
+        return this.http.get(`${this.baseUrl}/v1/usuarios/nome/${nome}`, UsuarioDataService.getHeaders());
+    }
+
+    public insertUsuario(data: any) {
+        return this.http.post(`${this.baseUrl}/v1/usuarios`, data, UsuarioDataService.getHeaders());
+    }
+
+    public updateUsuario(data: any) {
+        return this.http.put(`${this.baseUrl}/v1/usuarios`, data, UsuarioDataService.getHeaders());
     }
 
     static getHeaders(): object {

@@ -10,7 +10,8 @@ export class FramePage implements OnInit {
 
   public appPages = [
     { title: 'Home', url: '', icon: 'home' },
-    { title: 'Clientes', url: 'cliente', icon: 'people' }
+    { title: 'Clientes', url: 'cliente', icon: 'people' },
+    { title: 'Usuários', url: 'usuario', icon: 'person'}
   ];
 
   constructor(
